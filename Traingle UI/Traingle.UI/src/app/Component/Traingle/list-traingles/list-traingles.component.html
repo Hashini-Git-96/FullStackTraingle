@@ -1,0 +1,16 @@
+<div   class="card"  style="width: 20rem;" *ngFor="let traingle of traingles">
+    <img src="..." class="card-img-top" alt="...">
+      <div class="card-body" >
+        <h5 class="card-title" >Traingle Card</h5>
+      
+        <div  class="card-body" >
+         <p>Traingle ID: {{traingle.id}}</p>
+         <p>side A : {{traingle.sideA}}</p>
+         <p>Side B : {{traingle.sideB}}</p>
+         <p>Side C : {{traingle.sideC}}</p>
+        <h1 *ngIf="checkTraingleType(traingle)" >It's a Right Traingle</h1>
+       
+       <a  [routerLink]="['/traingles','edit',traingle.id]">view traingle</a>
+      </div>
+     
+    </div>

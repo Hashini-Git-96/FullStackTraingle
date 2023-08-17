@@ -1,0 +1,23 @@
+<div class="container my-5">
+    <h1 class="mb-3">
+       Update  Traingle Details
+    </h1>
+    <form #form="ngForm" (ngSubmit)="editTraingle()" >
+        <div class="col-5 mb-3 " > 
+          <label for="id" class="form-label" readoly="true">Traingle Id</label>
+          <input readonly=true class="form-control" id="id" name="id" [(ngModel)]="updateTraingleRequest.id">
+          <label for="side-A" class="form-label">Side A </label>
+          <input type="text" class="form-control" id="side-A" name="sideA" [(ngModel)]="updateTraingleRequest.sideA">
+          <label for="side-B" class="form-label">Side B</label>
+          <input type="text" class="form-control" id="side-B" name="sideB" [(ngModel)]="updateTraingleRequest.sideB">
+          <label for="side-C" class="form-label">Side C</label>
+          <input type="side-C" class="form-control" id="side-C" name="sidec" [(ngModel)]="updateTraingleRequest.sideC">     
+       </div>
+       
+        <button type="submit" class="btn btn-primary mt-3" (click)="editTraingle()">Update</button>
+        <button type="button" class="btn btn-danger mt-3" (click)="deleteTraingle(updateTraingleRequest.id)">Delete</button>
+       
+      
+      </form>
+    
+    </div>

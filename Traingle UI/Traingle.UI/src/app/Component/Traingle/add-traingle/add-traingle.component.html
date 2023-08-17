@@ -1,0 +1,24 @@
+<div class="container my-5">
+    <h1 class="mb-3">
+       Create Traingle
+    </h1>
+    <form #form="ngForm">
+        <div class="col-5 mb-3 " > 
+          <label for="side-A" class="form-label">Side A: </label>
+          <input type="text" class="form-control" id="side-A" name="SideA" [(ngModel)]="addTraingleDetails.sideA">
+          <label for="side-B" class="form-label">Side B: </label>
+          <input type="text" class="form-control" id="side-B" name="SideB" [(ngModel)]="addTraingleDetails.sideB">
+          <label for="side-C" class="form-label">Side C: </label>
+          <input type="text" class="form-control" id="side-C" name="SideC" [(ngModel)]="addTraingleDetails.sideC">
+         </div>
+       
+        
+        <button *ngIf="addTraingleDetails.sideA > 0 ||
+                       addTraingleDetails.sideB > 0 || 
+                       addTraingleDetails.sideC > 0" 
+                        class="btn btn-primary"  (click)="addTraingle()">
+                       Add-Traingle</button>
+         
+      </form>
+    
+    </div>
